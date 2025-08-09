@@ -24,7 +24,7 @@ class _DataSiswaState extends State<DataSiswa> {
       body: ListView.separated(
         padding: EdgeInsets.all(24),
         itemBuilder: (context, index) {
-          final item = siswa;
+          final item = siswa[index];
           return Text('${index + 1}. $item');
         },
         separatorBuilder: (context, index) {
