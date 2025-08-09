@@ -86,9 +86,9 @@ class _BerandaState extends State<Beranda> {
             ],
           ),
       ),
-        bottomNavigationBar: SafeArea(
-          child: Text('Copyright @2025', textAlign: TextAlign.center),
-        ),
-      );
+      bottomNavigationBar: SafeArea(
+        child: Text('Copyright @2025', textAlign: TextAlign.center),
+      ),
+    );
   }
 }

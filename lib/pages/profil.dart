@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sandbox_app/components/tombol.dart';
+import 'package:sandbox_app/pages/landing_page.dart';
 
 import '../components/cards.dart';
 import '../components/texts.dart';
@@ -49,8 +50,23 @@ class Profil extends StatelessWidget {
                   ],
                 )
               ),
+
+              const SizedBox(height: 20,),
+
+              TombolText(
+                text: 'Logout', 
+                onPressed: () {
+                  Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const LandingPage())
+                        );
+                },
+              )
+
             ]
         ),
+      ),
+      bottomNavigationBar: SafeArea(
+        child: Text('Copyright @2025', textAlign: TextAlign.center),
       ),
     );
   }
