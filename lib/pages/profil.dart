@@ -57,8 +57,7 @@ class Profil extends StatelessWidget {
                 text: 'Logout', 
                 onPressed: () {
                   Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const LandingPage())
-                        );
+                  MaterialPageRoute(builder: (context) => const LandingPage()));
                 },
               )
 

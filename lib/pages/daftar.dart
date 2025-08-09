@@ -267,9 +267,10 @@ void _shocwSnackBar() {
                   ElevatedButton(
                     onPressed: () {
                         _shocwSnackBar();
-                        Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const Beranda())
-        );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Beranda())
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepPurple.shade400,
