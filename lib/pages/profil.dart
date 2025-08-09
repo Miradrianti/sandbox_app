@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sandbox_app/components/tombol.dart';
 
 import '../components/cards.dart';
 import '../components/texts.dart';
@@ -36,7 +37,18 @@ class Profil extends StatelessWidget {
                       ],
                     ),
               ),
+
               const SizedBox(height: 20,),
+
+              RegularCard(child:
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Nama: '),
+                    const Text('Jenis Kelamin: '),
+                  ],
+                )
+              ),
             ]
         ),
       ),

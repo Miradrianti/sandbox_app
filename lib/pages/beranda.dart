@@ -56,7 +56,7 @@ class _BerandaState extends State<Beranda> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),),
-                    Text('Selamat datang di Aplikasi HSI Abdullah Roy'),
+                    Text('Selamat datang di halaman utama, silahkan pilih menu navigasi!'),
                   ],
                 ),
               ),
@@ -67,7 +67,7 @@ class _BerandaState extends State<Beranda> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Navigasi'),
+                    Text('Navigasi', style: TextStyle(fontWeight: FontWeight.bold),),
                     const Divider(height: 20, thickness: 2, indent: 0, endIndent: 0, color: Color.fromARGB(255, 178, 161, 207),),
                     TombolText(
                       text: '> Daftar Siswa',
