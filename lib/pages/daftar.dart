@@ -9,10 +9,13 @@ dan checkbox dicentang
 f. Tampilkan SnackBar dengan ringkasan input yang telah diisi
 g. Setelah 2 detik, kembalikan ke halaman utama (HomePage)
 */
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:sandbox_app/components/cards.dart';
 import 'package:sandbox_app/components/texts.dart';
 import 'package:sandbox_app/pages/beranda.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class Daftar extends StatefulWidget {
@@ -31,8 +34,8 @@ String? _character; //radiobutton
 bool isChecked = false; //checkbox
 bool light = true; //switch
 
-void _shocwSnackBar() {
-  final text = _usernameController.text;
+Future<void> _shocwSnackBar() async {
+  final text = _usernameController.text.trim();
   final jk = _character;
   
   //validasi
@@ -48,6 +51,15 @@ void _shocwSnackBar() {
     );
     return;
   }
+
+  final prefs = await SharedPreferences.getInstance();
+
+  final profil = {
+    "nama" : text,
+    "jenisKelamin": jk
+  };
+
+  await prefs.setString("profil", jsonEncode(profil));
 
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(

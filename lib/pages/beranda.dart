@@ -56,6 +56,7 @@ class _BerandaState extends State<Beranda> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),),
+                    
                     Text('Selamat datang di halaman utama, silahkan pilih menu navigasi!'),
                   ],
                 ),
